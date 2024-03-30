@@ -13,6 +13,7 @@ public class Demo5 {
 
         /*
          ** Generally throw keyword meant for customized exceptions, but not for predefined exceptions **
+         ** After throw keyword we are not allowed to write any statement, otherwise we will get compile time error: "unreachable statement"
          */
     }
 }
