@@ -1,0 +1,46 @@
+A java programme can contain any number of classes but at most one class can be declared as "public".
+If there is a public class in java Programme the name of public class and the name of java source file must be matched.
+
+If there is no public class then we can use any name for java source file name and there are no restrictions.
+
+javac Durga.java - generates A.class/B.class/C.class files (as all these three are java programmes) but while running/executing
+java programme (java.A/java.B/java.C) corresponding java programme main method will be executed.
+java Durga.java --> leads to RE: NoClassDefFoundError:Durga
+
+We can compile a java programme but not a particular class, we can run a java class (.class file) but not java programme.
+
+It is highly recommended to take only one class per src file (.java file) and name of the class and name of the programme
+must be matched, this improves readability and understandability of the application
+
+While resolving class names compiler will always gives the precedence in the following order
+    Explicit class import
+    classes present in working directory
+    implicit class import
+
+The following two packages are not required to import, because these packages and classes by default available to every java programme
+    java.lang package
+    current working package
+
+ "import statements" are totally compile time issue, more no of imports, more will be compile time, but there is no effect on execution time.
+
+
+ Explanation about System.out.println() :|
+    System  --> It is class present in java.lang package
+    out     --> It is a static variable of type PrintStream present in System class
+    println --> It is a method present in the PrintStream class
+
+ Every "wrapper class" in java we can find the two constants
+    MAX_VALUE
+    MIN_VALUE
+
+ Every method present inside final class is always final whether we declared or not,
+ but every variable present inside final class need not be final.
+ main advantage of final keyword is - we can achieve security as no one is allowed to create child class/override a method.
+ main disadvantage of final keyword is we are missing key benefits of OOPs concepts like
+    inheritance (not creating child class because of final keyword)
+    polymorphism (not overriding a method because of final keyword)
+
+  Protected modifier: We can access "protected" members within the current package from anywhere and
+  we can use either parent class reference or child class reference but form outside package
+  we can access "protected" access members only in child classes that to with help of child class reference only i.e;
+  from outside package we can't access "protected" members by using "parent reference".
