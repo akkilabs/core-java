@@ -44,3 +44,22 @@ The following two packages are not required to import, because these packages an
   we can use either parent class reference or child class reference but form outside package
   we can access "protected" access members only in child classes that to with help of child class reference only i.e;
   from outside package we can't access "protected" members by using "parent reference".
+
+  About variables:
+  ================
+
+  For normal "instance" and "static" variables it is not required to perform initialization, JVM will provide default values
+  but if these variables declared as "final" then we should perform initialization whether we are using it or not.
+
+  For the "final" instance variables we need to perform initialization before constructor completion i.e;
+    at the time of declaration
+    inside instance block
+    inside constructor
+
+  For the "final" static variables we need to perform initialization before class loading i.e;
+    at the time of declaration
+    inside static block.
+
+  Whether local variable is "final" or not, compulsory we should perform initialization before using it.
+  JVM won't provide any default values.
+     
