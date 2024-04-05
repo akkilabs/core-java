@@ -62,4 +62,20 @@ The following two packages are not required to import, because these packages an
 
   Whether local variable is "final" or not, compulsory we should perform initialization before using it.
   JVM won't provide any default values.
+
+  Interface: Any requirement specification or any contract between service provider and client OR 100% pure abstract classes
+  is nothing but interface
+
+    From client point of view an interface defines the set of services what he is expecting.
+    From the service provider point of view an interface defines the set of services what he is offering.
+    Hence interface acts as a contract between client and service provider.
+
+   extends VS implements:
+   ======================
+
+    A class can extends only one class at a time.
+    A class can implement any num of interfaces simultaneously
+    A class can extend a class and implement any number of interfaces simultaneously
+    An interface can extends any number of interfaces at a time.
+
      
