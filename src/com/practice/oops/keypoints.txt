@@ -63,12 +63,23 @@ The following two packages are not required to import, because these packages an
   Whether local variable is "final" or not, compulsory we should perform initialization before using it.
   JVM won't provide any default values.
 
-  Interface: Any requirement specification or any contract between service provider and client OR 100% pure abstract classes
+  Interface:
+  ==========
+  Any requirement specification or any contract between service provider and client OR 100% pure abstract classes
   is nothing but interface
 
     From client point of view an interface defines the set of services what he is expecting.
     From the service provider point of view an interface defines the set of services what he is offering.
-    Hence interface acts as a contract between client and service provider.
+    Hence, interface acts as a contract between client and service provider.
+
+ If two interfaces contains a method with same method signature and the same return type then in implementation class,
+ only one method implementation is enough.
+
+ If two interfaces contains a method with the same name but different arguments in the implementation class we can provide
+ implementation to both methods and these methods can act as overloaded methods.
+
+ If two interfaces contains a method with same method signature and different return types
+ then we can't implement both interfaces simultaneously.
 
    extends VS implements:
    ======================
@@ -76,6 +87,14 @@ The following two packages are not required to import, because these packages an
     A class can extends only one class at a time.
     A class can implement any num of interfaces simultaneously
     A class can extend a class and implement any number of interfaces simultaneously
-    An interface can extends any number of interfaces at a time.
+    An interface can extends any number of interfaces at a time.y
 
-     
+Marker Interface:
+================
+
+ If an interface doesn't contain any methods and by implementing that interface if our objects will get some ability
+ such type of interfaces are called "Marker Interfaces"
+
+  eg: Serializable
+      Cloneable
+      RandomAccess
